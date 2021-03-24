@@ -13,6 +13,8 @@
 		F2CD0F6D2608CCD10056FCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CD0F6B2608CCD10056FCB5 /* Main.storyboard */; };
 		F2CD0F6F2608CCD30056FCB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CD0F6E2608CCD30056FCB5 /* Assets.xcassets */; };
 		F2CD0F722608CCD30056FCB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CD0F702608CCD30056FCB5 /* LaunchScreen.storyboard */; };
+		F2CD0F802608D36C0056FCB5 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD0F7F2608D36C0056FCB5 /* CurrencyManager.swift */; };
+		F2CD0F832608F8860056FCB5 /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD0F822608F8860056FCB5 /* CurrencyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F2CD0F6E2608CCD30056FCB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2CD0F712608CCD30056FCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2CD0F732608CCD30056FCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2CD0F7F2608D36C0056FCB5 /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		F2CD0F822608F8860056FCB5 /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,39 @@
 			children = (
 				F2CD0F652608CCD10056FCB5 /* AppDelegate.swift */,
 				F2CD0F672608CCD10056FCB5 /* SceneDelegate.swift */,
-				F2CD0F692608CCD10056FCB5 /* ViewController.swift */,
-				F2CD0F6B2608CCD10056FCB5 /* Main.storyboard */,
+				F2CD0F7D2608CD100056FCB5 /* Model */,
+				F2CD0F7B2608CCFF0056FCB5 /* Controller */,
+				F2CD0F7A2608CCF40056FCB5 /* View */,
 				F2CD0F6E2608CCD30056FCB5 /* Assets.xcassets */,
 				F2CD0F702608CCD30056FCB5 /* LaunchScreen.storyboard */,
 				F2CD0F732608CCD30056FCB5 /* Info.plist */,
 			);
 			path = CurrencyConverter;
+			sourceTree = "<group>";
+		};
+		F2CD0F7A2608CCF40056FCB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2CD0F6B2608CCD10056FCB5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2CD0F7B2608CCFF0056FCB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2CD0F692608CCD10056FCB5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2CD0F7D2608CD100056FCB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2CD0F7F2608D36C0056FCB5 /* CurrencyManager.swift */,
+				F2CD0F822608F8860056FCB5 /* CurrencyData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +169,8 @@
 			files = (
 				F2CD0F6A2608CCD10056FCB5 /* ViewController.swift in Sources */,
 				F2CD0F662608CCD10056FCB5 /* AppDelegate.swift in Sources */,
+				F2CD0F802608D36C0056FCB5 /* CurrencyManager.swift in Sources */,
+				F2CD0F832608F8860056FCB5 /* CurrencyData.swift in Sources */,
 				F2CD0F682608CCD10056FCB5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
