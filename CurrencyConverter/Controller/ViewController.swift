@@ -87,7 +87,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return parsedCurrencyNames.count
+       
     }
     
 //    func parsedC(parsedcn: String) {
@@ -102,15 +104,25 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 //    }
     func parsedData(parsedCurrency: [String:Double]) {
         parsedCurrencyNames = parsedCurrency
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as UITableViewCell
-        var key   = Array(self.parsedCurrencyNames.keys)[indexPath.row]
-        var value = Array(self.parsedCurrencyNames.values)[indexPath.row]
+//        var key   = Array(self.parsedCurrencyNames.keys)[indexPath.row]
+//        var value = Array(self.parsedCurrencyNames.values)[indexPath.row]
+        
+        let key   = (Array(self.parsedCurrencyNames.keys)[indexPath.row])
+        let value = (Array(self.parsedCurrencyNames.values)[indexPath.row])
         cell.textLabel?.text = key
         cell.detailTextLabel?.text = String(value)
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                    tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+            }
+        
         return cell
+        
     }
     
 }

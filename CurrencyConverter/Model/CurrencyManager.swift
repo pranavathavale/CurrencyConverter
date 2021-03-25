@@ -19,7 +19,7 @@ protocol CurrencyManagerDelegate {
 
 struct CurrencyManager {
     
-    let baseURL = "https://v6.exchangerate-api.com/v6/APIKEY HERE/latest/"
+    let baseURL = "https://v6.exchangerate-api.com/v6/590858245d5eea33f714ba0e/latest/"
     
     let currencyArray = ["INR","AED","AFN","ALL","AMD","ANG","AOA","ARS","AUD","AWG","AZN","BAM",
                          "BBD","BDT","BGN","BHD","BIF","BMD","BND","BOB","BRL","BSD","BTN","BWP",
@@ -68,7 +68,7 @@ struct CurrencyManager {
                         }
                         
                         if let parsedCurrencyData = currencySelected.2 {
-                            delegate?.parsedData(parsedCurrency: parsedCurrencyData)
+                               delegate?.parsedData(parsedCurrency: parsedCurrencyData)
 //                            for (key,value) in parsedCurrencyData {
 //                                delegate?.parsedC(parsedcn: key)
 //                                delegate?.parsedV(parsedcv: value)
@@ -92,7 +92,7 @@ struct CurrencyManager {
             let selectedCurrencyName = decodedData.base_code
             let selectedCurrency = decodedData.conversion_rates[decodedData.base_code]
             let parsedData = decodedData.conversion_rates
-            print(parsedData)
+           // print(parsedData)
 //            let convertedCurrencyValue = decodedData.conversion_rates[ccn ?? ""]
             return (selectedCurrencyName, selectedCurrency, parsedData)
         }
